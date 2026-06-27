@@ -2,10 +2,8 @@
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
-.Python
-env/
 venv/
+env/
 *.egg-info/
 
 # Django
@@ -13,7 +11,7 @@ venv/
 staticfiles/
 media/
 
-# Environment
+# Environment - IMPORTANT: never push this
 .env
 
 # Vectorstore
@@ -22,3 +20,6 @@ vectorstore/
 # OS
 .DS_Store
 Thumbs.db
+
+# Data backup
+data_backup*.json
