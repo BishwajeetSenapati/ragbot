@@ -191,7 +191,6 @@ def index_document(file_path: str, user_id, doc_id) -> int:
 # ── Answer Question ───────────────────────────────────────────────────────────
 
 def answer_question(question: str, user_id, doc_ids=None) -> dict:
-    from langchain_groq import ChatGroq
 
     print(f"Embedding question...")
     question_vector = embed_query(question)
@@ -246,12 +245,13 @@ Question: {question}
 
 Answer:"""
 
-    llm = ChatGroq(
+    from groq import Groq
+    client = Groq(api_key=settings.GROQ_API_KEY)
+    completion = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
-        api_key=settings.GROQ_API_KEY,
+        messages=[{"role": "user", "content": prompt}],
         temperature=0,
     )
-    response = llm.invoke(prompt)
 
     sources = []
     for match in results.matches:
@@ -261,7 +261,7 @@ Answer:"""
         })
 
     return {
-        "answer":  response.content,
+        "answer":  completion.choices[0].message.content,
         "sources": sources,
     }
 
@@ -285,7 +285,7 @@ def delete_document_chunks(user_id, doc_id):
 # ── Document Summary ──────────────────────────────────────────────────────────
 
 def summarize_document(file_path: str) -> str:
-    from langchain_groq import ChatGroq
+    from groq import Groq
 
     docs          = load_document(file_path)
     chunks        = chunk_documents(docs)
@@ -304,11 +304,10 @@ Text:
 
 Summary:"""
 
-    llm = ChatGroq(
+    client = Groq(api_key=settings.GROQ_API_KEY)
+    completion = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
-        api_key=settings.GROQ_API_KEY,
+        messages=[{"role": "user", "content": prompt}],
         temperature=0.3,
     )
-
-    response = llm.invoke(prompt)
-    return response.content.strip()
+    return completion.choices[0].message.content.strip()
