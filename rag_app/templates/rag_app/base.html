@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}RAG Q&A Bot{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'rag_app/css/style.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">📄 DocMind</div>
+        <div class="nav-links">
+            <a href="{% url 'index' %}" class="nav-link">Upload</a>
+            <a href="{% url 'documents' %}" class="nav-link">Documents</a>
+            <a href="{% url 'chat' %}" class="nav-link btn-chat">Chat →</a>
+            <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+            {% if user.is_authenticated %}
+                <span class="nav-user">👤 {{ user.username }}</span>
+                <a href="{% url 'logout' %}" class="nav-link nav-logout">Logout</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+    <script>
+        // ── Theme Init (runs immediately to avoid flash) ──────────────────────
+        (function() {
+            const savedTheme = localStorage.getItem('docmind-theme') || 'dark';
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
+    <script>
+        // ── Theme Toggle Button ─────────────────────────────────────────────
+        const themeToggle = document.getElementById('themeToggle');
+
+        function updateToggleIcon() {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            themeToggle.textContent = isLight ? '☀️' : '🌙';
+        }
+
+        updateToggleIcon();
+
+        themeToggle.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+
+            if (isLight) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('docmind-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('docmind-theme', 'light');
+            }
+
+            updateToggleIcon();
+        });
+    </script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

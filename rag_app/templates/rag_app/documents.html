@@ -1,0 +1,41 @@
+{% extends "rag_app/base.html" %}
+{% load static %}
+
+{% block title %}My Documents{% endblock %}
+
+{% block content %}
+<div class="docs-page">
+
+    <div class="docs-header">
+        <h1>My Documents</h1>
+        <a href="{% url 'index' %}" class="btn-primary">+ Upload More</a>
+    </div>
+
+    <div class="docs-stats" id="docsStats">
+        <div class="stat-card">
+            <span class="stat-number" id="totalDocs">0</span>
+            <span class="stat-label">Total Files</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number" id="totalChunks">0</span>
+            <span class="stat-label">Total Chunks</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number" id="readyDocs">0</span>
+            <span class="stat-label">Ready</span>
+        </div>
+    </div>
+
+    <div class="docs-list" id="docsList">
+        <div class="docs-empty" id="docsEmpty" style="display:none;">
+            <p>📂 No documents uploaded yet.</p>
+            <a href="{% url 'index' %}" class="btn-primary">Upload Documents</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'rag_app/js/documents.js' %}"></script>
+{% endblock %}

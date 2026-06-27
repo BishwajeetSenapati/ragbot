@@ -1,0 +1,1461 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$TxB8FKK3L8qI6AwE15PAQa$KnD3WAHkYm1OcFYc8m/B2tjpDVF90uZtBZukaPflc1A=",
+    "last_login": "2026-06-24T06:00:52.166Z",
+    "is_superuser": true,
+    "username": "Bishwajeet",
+    "first_name": "",
+    "last_name": "",
+    "email": "bishwajeet663@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-06-16T09:58:04.475Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$6g5I0vaD8EDzsMHmDXfEJn$sIBzgKnaWpfN0WUXzqL8BKbtUgW7oNj2u+0FGw2NywY=",
+    "last_login": "2026-06-24T05:56:14.704Z",
+    "is_superuser": false,
+    "username": "Ganesh",
+    "first_name": "",
+    "last_name": "",
+    "email": "bishwajeetsenapati553@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-16T10:36:42.818Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6o3tsog9j4cc7msuilr4juklqbi8dogx",
+  "fields": {
+    "session_data": ".eJxVjDEOwyAQBP9CHSHOYAtSps8b0MEdwUkEkrErK38PllwkzRazs7sLj9ua_dZ48TOJqwBx-WUB44vLUdATy6PKWMu6zEEeijzbJu-V-H073b-DjC33taLEEWkkBnIWUYeoEEaMOhqwBhMaMnZANYCjicF1QjqBnnqGBOLzBSRQOV0:1wcGfM:Nqq3VwzklBP3xb8-hhMXdC4Xf403dANVqBnGYehMnqk",
+    "expire_date": "2026-07-08T06:00:52.172Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pmqu8rr7fpnzct10t7vxwb9552fcb96z",
+  "fields": {
+    "session_data": ".eJxVjDEOwyAQBP9CHSHOYAtSps8b0MEdwUkEkrErK38PllwkzRazs7sLj9ua_dZ48TOJqwBx-WUB44vLUdATy6PKWMu6zEEeijzbJu-V-H073b-DjC33taLEEWkkBnIWUYeoEEaMOhqwBhMaMnZANYCjicF1QjqBnnqGBOLzBSRQOV0:1wa9Hq:rWVeGdSXnr3W6OvTrp3-xlYOv6rIVqFtz2EtykCrMNc",
+    "expire_date": "2026-07-02T09:43:50.215Z"
+  }
+},
+{
+  "model": "rag_app.document",
+  "pk": 15,
+  "fields": {
+    "user": [
+      "Bishwajeet"
+    ],
+    "name": "Disaster  Management Cyclone.pdf",
+    "file": "uploads/Disaster__Management_Cyclone.pdf",
+    "file_type": "pdf",
+    "size": 2543034,
+    "chunk_count": 26,
+    "summary": "This document is about environmental pollution, specifically focusing on cyclones, and is part of a B.Tech course in Environmental Studies. It covers main topics such as the classification of disasters, causes and impacts of cyclones, disaster management, and cyclone mitigation, providing a comprehensive understanding of the subject. The document would be useful for students of environmental studies, disaster management professionals, and individuals interested in understanding the effects of cyclones and how to mitigate their impact. Overall, it provides a detailed overview of cyclones and their management, making it a valuable resource for those seeking to learn about this topic.",
+    "status": "ready",
+    "uploaded_at": "2026-06-24T05:22:47.238Z"
+  }
+},
+{
+  "model": "rag_app.document",
+  "pk": 18,
+  "fields": {
+    "user": [
+      "Bishwajeet"
+    ],
+    "name": "env-book-2018.pdf",
+    "file": "uploads/env-book-2018.pdf",
+    "file_type": "pdf",
+    "size": 4128816,
+    "chunk_count": 1390,
+    "summary": "This document is about the core module syllabus for environmental studies for undergraduate courses in all branches of higher education. It covers topics such as the importance of environmental science, sustainable development, pollution, biodiversity, and environmental management, as well as the need for public awareness and education on environmental issues. This document would be useful for undergraduate students, educators, and policymakers in higher education institutions, particularly in India, as it provides a framework for teaching and learning about environmental studies. The syllabus aims to equip students with a clear understanding of environmental concerns and promote sustainable development practices.",
+    "status": "ready",
+    "uploaded_at": "2026-06-24T05:44:04.559Z"
+  }
+},
+{
+  "model": "rag_app.document",
+  "pk": 19,
+  "fields": {
+    "user": [
+      "Ganesh"
+    ],
+    "name": "Disaster  Management Cyclone.pdf",
+    "file": "uploads/Disaster__Management_Cyclone_CeXNVqB.pdf",
+    "file_type": "pdf",
+    "size": 2543034,
+    "chunk_count": 26,
+    "summary": "This document is about environmental pollution, specifically focusing on cyclones, and is part of a B. Tech course in Environmental Studies. It covers main topics such as the classification of disasters, causes and impacts of cyclones, disaster management, and mitigation, as well as providing an overview of major cyclones in India and the country's disaster management structure. Students of environmental studies, disaster management professionals, and individuals interested in understanding the effects of cyclones and disaster mitigation would find this document useful. Overall, the document provides a comprehensive understanding of cyclones and their impact on the environment and human societies.",
+    "status": "ready",
+    "uploaded_at": "2026-06-24T05:57:27.493Z"
+  }
+},
+{
+  "model": "rag_app.chatsession",
+  "pk": 85,
+  "fields": {
+    "user": [
+      "Bishwajeet"
+    ],
+    "session_id": "7a70c3c7-2293-4755-9523-c379ea0d6833",
+    "title": "New Chat",
+    "created_at": "2026-06-24T05:22:18.095Z",
+    "last_active": "2026-06-24T05:22:18.095Z"
+  }
+},
+{
+  "model": "rag_app.chatsession",
+  "pk": 86,
+  "fields": {
+    "user": [
+      "Bishwajeet"
+    ],
+    "session_id": "1430b743-37d3-42c1-97c8-f05ef48d7d57",
+    "title": "Typhoons found in which regions?",
+    "created_at": "2026-06-24T05:25:07.856Z",
+    "last_active": "2026-06-24T05:25:44.705Z"
+  }
+},
+{
+  "model": "rag_app.chatsession",
+  "pk": 87,
+  "fields": {
+    "user": [
+      "Bishwajeet"
+    ],
+    "session_id": "c815da10-77ec-4408-b979-9cea7fa4b8ba",
+    "title": "New Chat",
+    "created_at": "2026-06-24T05:45:57.348Z",
+    "last_active": "2026-06-24T05:45:57.348Z"
+  }
+},
+{
+  "model": "rag_app.chatsession",
+  "pk": 88,
+  "fields": {
+    "user": [
+      "Bishwajeet"
+    ],
+    "session_id": "49342c7d-4ccc-4768-99a1-ab71ad86ba6a",
+    "title": "BNHS established in which year?",
+    "created_at": "2026-06-24T05:47:19.790Z",
+    "last_active": "2026-06-24T05:49:27.559Z"
+  }
+},
+{
+  "model": "rag_app.chatsession",
+  "pk": 89,
+  "fields": {
+    "user": [
+      "Ganesh"
+    ],
+    "session_id": "3d79a038-6b51-4eaf-bea6-d11f3ba63d17",
+    "title": "BNHS established in which year?",
+    "created_at": "2026-06-24T05:56:18.729Z",
+    "last_active": "2026-06-24T05:56:24.725Z"
+  }
+},
+{
+  "model": "rag_app.chatsession",
+  "pk": 90,
+  "fields": {
+    "user": [
+      "Ganesh"
+    ],
+    "session_id": "0c42e9e4-b5b8-47b0-9101-4e3c1ecd4835",
+    "title": "BNHS established in which year?",
+    "created_at": "2026-06-24T05:59:42.678Z",
+    "last_active": "2026-06-24T06:00:04.065Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 95,
+  "fields": {
+    "session": 86,
+    "role": "user",
+    "content": "Typhoons found in which regions?",
+    "created_at": "2026-06-24T05:25:32.308Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 96,
+  "fields": {
+    "session": 86,
+    "role": "assistant",
+    "content": "Typhoons are found in the Western Pacific Ocean and north of the equator (page not specified, as page numbers are not provided in the context).",
+    "created_at": "2026-06-24T05:25:44.641Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 97,
+  "fields": {
+    "session": 86,
+    "role": "user",
+    "content": "Typhoons found in which regions?",
+    "created_at": "2026-06-24T05:25:58.928Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 98,
+  "fields": {
+    "session": 86,
+    "role": "assistant",
+    "content": "Typhoons are found in the Western Pacific Ocean and north of the equator (page not specified, as page numbers are not provided in the context).",
+    "created_at": "2026-06-24T05:26:11.674Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 99,
+  "fields": {
+    "session": 88,
+    "role": "user",
+    "content": "BNHS established in which year?",
+    "created_at": "2026-06-24T05:49:15.697Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 100,
+  "fields": {
+    "session": 88,
+    "role": "assistant",
+    "content": "I don't have enough information. The context does not mention the establishment year of BNHS (Bombay Natural History Society). The provided context primarily discusses disaster management, cyclone forecasting, and various organizations involved in these efforts, but it does not include information about BNHS.",
+    "created_at": "2026-06-24T05:49:27.488Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 101,
+  "fields": {
+    "session": 88,
+    "role": "user",
+    "content": "BNHS established in which year?",
+    "created_at": "2026-06-24T05:49:41.643Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 102,
+  "fields": {
+    "session": 88,
+    "role": "assistant",
+    "content": "The Bombay Natural History Society (BNHS) was established in 1883 (page 9).",
+    "created_at": "2026-06-24T05:50:04.249Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 103,
+  "fields": {
+    "session": 88,
+    "role": "user",
+    "content": "Typhoons found in which regions?",
+    "created_at": "2026-06-24T05:50:29.664Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 104,
+  "fields": {
+    "session": 88,
+    "role": "assistant",
+    "content": "The context does not explicitly mention typhoons, but it does discuss tropical cyclones, which are similar. According to the text (page not specified), the Indian Ocean is one of the six major cyclone-prone regions of the world. Additionally, it mentions that cyclones occur in the Bay of Bengal and the Arabian Sea, which are both part of the Indian Ocean. \n\nIt's worth noting that typhoons are essentially the same as tropical cyclones or hurricanes, but the term \"typhoon\" is specifically used in the western Pacific Ocean. Since the context does not mention the western Pacific Ocean, but does discuss tropical cyclones in general, we can infer that typhoons would be found in similar regions, but this is not explicitly stated.",
+    "created_at": "2026-06-24T05:50:43.881Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 105,
+  "fields": {
+    "session": 88,
+    "role": "user",
+    "content": "Typhoons found in which regions?",
+    "created_at": "2026-06-24T05:51:05.193Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 106,
+  "fields": {
+    "session": 88,
+    "role": "assistant",
+    "content": "Typhoons are found in the Western Pacific Ocean and north of the equator (page not specified, as page numbers are not provided in the context).",
+    "created_at": "2026-06-24T05:51:19.205Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 107,
+  "fields": {
+    "session": 88,
+    "role": "user",
+    "content": "Typhoons found in which regions?",
+    "created_at": "2026-06-24T05:51:39.071Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 108,
+  "fields": {
+    "session": 88,
+    "role": "assistant",
+    "content": "Typhoons are found in the Western Pacific Ocean and north of the equator (page not specified).",
+    "created_at": "2026-06-24T05:52:12.659Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 109,
+  "fields": {
+    "session": 88,
+    "role": "user",
+    "content": "BNHS established in which year?",
+    "created_at": "2026-06-24T05:52:28.804Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 110,
+  "fields": {
+    "session": 88,
+    "role": "assistant",
+    "content": "The Bombay Natural History Society (BNHS) was established in 1883 (page not specified).",
+    "created_at": "2026-06-24T05:53:04.316Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 111,
+  "fields": {
+    "session": 89,
+    "role": "user",
+    "content": "BNHS established in which year?",
+    "created_at": "2026-06-24T05:56:24.703Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 112,
+  "fields": {
+    "session": 89,
+    "role": "assistant",
+    "content": "No documents uploaded yet.",
+    "created_at": "2026-06-24T05:56:24.718Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 113,
+  "fields": {
+    "session": 90,
+    "role": "user",
+    "content": "BNHS established in which year?",
+    "created_at": "2026-06-24T05:59:50.984Z"
+  }
+},
+{
+  "model": "rag_app.message",
+  "pk": 114,
+  "fields": {
+    "session": 90,
+    "role": "assistant",
+    "content": "I don't have enough information. The context does not mention the establishment year of BNHS (Bombay Natural History Society). The provided context primarily discusses disaster management, cyclone forecasting, and various organizations involved in these efforts, but it does not include information about BNHS.",
+    "created_at": "2026-06-24T06:00:04.008Z"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 241,
+  "fields": {
+    "message": 96,
+    "document": null,
+    "page_number": 4,
+    "snippet": "Classification of cyclone \n• Hurricanes – tropical cyclones in the \nAtlantic and Eastern Pacific Oceans \n• Typhoons – tropical cyclones in  waste \nPacific Ocean and north of equator \n• Cyclones – trop"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 242,
+  "fields": {
+    "message": 96,
+    "document": null,
+    "page_number": 9,
+    "snippet": "Criteria followed classify cyclones\n\n¢ As adopted by Meteorological Department of\n\nIndia. au —_\n\nType of Disturbances ‘Wind Speed in Km/h ‘Wind Speed in Knots\n\n| Low Pressure | Less than 31 | Less tha"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 243,
+  "fields": {
+    "message": 96,
+    "document": null,
+    "page_number": 10,
+    "snippet": "Cyclone MAP of India\n\nVulnerability to storm surges is not uniform along Indian\ncoasts.\n\nEast coast of India are most vulnerable to high surges\n\nCA cenS Wines SPEED A CP COMETH eI. — i) North Orissa, "
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 244,
+  "fields": {
+    "message": 96,
+    "document": null,
+    "page_number": 3,
+    "snippet": "Cyclone\n\n¢ \"Cyclone\" is an intense whirl in the\natmosphere with very strong winds circulating\naround it in anti-clockwise direction in the\nNorthern Hemisphere and in clockwise\ndirection in the Souther"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 245,
+  "fields": {
+    "message": 96,
+    "document": null,
+    "page_number": 11,
+    "snippet": "“Consequent strong winds. These, in turn, generate storm\nsurges.\n\n« Abnormal rise of sea level near the coast caused by a\nsevere tropical cyclone.\n\n« Very strong winds may damage installations, dwelli"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 246,
+  "fields": {
+    "message": 98,
+    "document": null,
+    "page_number": 4,
+    "snippet": "Classification of cyclone \n• Hurricanes – tropical cyclones in the \nAtlantic and Eastern Pacific Oceans \n• Typhoons – tropical cyclones in  waste \nPacific Ocean and north of equator \n• Cyclones – trop"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 247,
+  "fields": {
+    "message": 98,
+    "document": null,
+    "page_number": 9,
+    "snippet": "Criteria followed classify cyclones\n\n¢ As adopted by Meteorological Department of\n\nIndia. au —_\n\nType of Disturbances ‘Wind Speed in Km/h ‘Wind Speed in Knots\n\n| Low Pressure | Less than 31 | Less tha"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 248,
+  "fields": {
+    "message": 98,
+    "document": null,
+    "page_number": 10,
+    "snippet": "Cyclone MAP of India\n\nVulnerability to storm surges is not uniform along Indian\ncoasts.\n\nEast coast of India are most vulnerable to high surges\n\nCA cenS Wines SPEED A CP COMETH eI. — i) North Orissa, "
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 249,
+  "fields": {
+    "message": 98,
+    "document": null,
+    "page_number": 3,
+    "snippet": "Cyclone\n\n¢ \"Cyclone\" is an intense whirl in the\natmosphere with very strong winds circulating\naround it in anti-clockwise direction in the\nNorthern Hemisphere and in clockwise\ndirection in the Souther"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 250,
+  "fields": {
+    "message": 98,
+    "document": null,
+    "page_number": 11,
+    "snippet": "“Consequent strong winds. These, in turn, generate storm\nsurges.\n\n« Abnormal rise of sea level near the coast caused by a\nsevere tropical cyclone.\n\n« Very strong winds may damage installations, dwelli"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 251,
+  "fields": {
+    "message": 100,
+    "document": null,
+    "page_number": 19,
+    "snippet": "Armed Forces\nCentral Para Military Forces\nState Police Forces and Fire Services\n\nCivil Defence and Home Guards\n\nE.g.: Non Governmental Organizations National Service Scheme (NSS)\n\nCo-Operative for ass"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 252,
+  "fields": {
+    "message": 100,
+    "document": null,
+    "page_number": 19,
+    "snippet": "E.g.: Indian Meteorological department (IMD) plays a key role in\n\nforewarning the disaster of cyclone-storms by detection tracing. It has\n5 centres in Kolkata, Bhubaneswar, Vishakhapatnam, Chennai & )"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 253,
+  "fields": {
+    "message": 100,
+    "document": null,
+    "page_number": 0,
+    "snippet": "B. Tech (Environmental Studies)\n\nCyclone\n\nUnit 5\n\nEnvironmental Pollution"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 254,
+  "fields": {
+    "message": 100,
+    "document": null,
+    "page_number": 20,
+    "snippet": "General management in India\n\n© An artificially created reservoir behind a dam across a river\n© Channelization of river.\n© Artificially raised embankments that reduce spilling\n\n© Channel and drainage i"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 255,
+  "fields": {
+    "message": 100,
+    "document": null,
+    "page_number": 18,
+    "snippet": "Cyclone Operation India\n\nCiMeteorological Department, by providing Cyclone Surveillance Radars at\n\nin the east coast and at Goa, Bombay in the west coast.\n\nOSatellite picture receiving equipments at D"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 256,
+  "fields": {
+    "message": 102,
+    "document": null,
+    "page_number": 37,
+    "snippet": "organizations include government organisations\nsuch as the BSI and ZSI, and NGOs such as BNHS,\nWWF-I, etc.\nBombay Natural History Society (BNHS),\nMumbai: the BNHS began as a small society of\nsix membe"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 257,
+  "fields": {
+    "message": 102,
+    "document": null,
+    "page_number": 37,
+    "snippet": "in public places.\n• Take part in events organised on World\nEnvironment Day, Wildlife Week, etc.\n• Visit a National Park or Sanctuary, or spend\ntime in whatever nature you have near your\nhome.\n1.2.1 In"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 258,
+  "fields": {
+    "message": 102,
+    "document": null,
+    "page_number": 39,
+    "snippet": "involved with the preparation of site-specific,\nenvironmental manuals for schoolteachers.\nKalpavriksh was responsible for developing\nIndia’s National Biodiversity Strategy and Action\nPlan in 2003.\nSal"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 259,
+  "fields": {
+    "message": 102,
+    "document": null,
+    "page_number": 38,
+    "snippet": "Mammals and PV Bole’s book of Indian Trees.\nOne of its greatest scientists was Dr. Salim Ali\nwhose ornithological work on the birds of the\nIndian subcontinent is world famous. The BNHS\nhas over the ye"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 260,
+  "fields": {
+    "message": 102,
+    "document": null,
+    "page_number": 39,
+    "snippet": "at the Royal Botanic Gardens, Calcutta. How-\never it closed down for several years after 1939\nand was reopened in 1954. In 1952 plans were\nmade to reorganise the BSI and formulate its\nobjectives. By 1"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 261,
+  "fields": {
+    "message": 102,
+    "document": null,
+    "page_number": 19,
+    "snippet": "Armed Forces\nCentral Para Military Forces\nState Police Forces and Fire Services\n\nCivil Defence and Home Guards\n\nE.g.: Non Governmental Organizations National Service Scheme (NSS)\n\nCo-Operative for ass"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 262,
+  "fields": {
+    "message": 102,
+    "document": null,
+    "page_number": 19,
+    "snippet": "E.g.: Indian Meteorological department (IMD) plays a key role in\n\nforewarning the disaster of cyclone-storms by detection tracing. It has\n5 centres in Kolkata, Bhubaneswar, Vishakhapatnam, Chennai & )"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 263,
+  "fields": {
+    "message": 102,
+    "document": null,
+    "page_number": 0,
+    "snippet": "B. Tech (Environmental Studies)\n\nCyclone\n\nUnit 5\n\nEnvironmental Pollution"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 264,
+  "fields": {
+    "message": 104,
+    "document": null,
+    "page_number": 185,
+    "snippet": "promising results after two seasons. The author\nhowever states that coordination between Gov-\nernment, local NGOs and local community ini-\ntiatives both for rescue as well as rehabilitation\nneeds to b"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 265,
+  "fields": {
+    "message": 104,
+    "document": null,
+    "page_number": 236,
+    "snippet": "promising results after two seasons. The author\nhowever states that coordination between Gov-\nernment, local NGOs and local community ini-\ntiatives both for rescue as well as rehabilitation\nneeds to b"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 266,
+  "fields": {
+    "message": 104,
+    "document": null,
+    "page_number": 181,
+    "snippet": "in the country has been identified as being prone\nto floods. Major floods are mainly caused in the\nGanga-Brahmaputra-Meghna basin which car-\nries 60 percent of the total river flow of our coun-\ntry.\nI"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 267,
+  "fields": {
+    "message": 104,
+    "document": null,
+    "page_number": 232,
+    "snippet": "in the country has been identified as being prone\nto floods. Major floods are mainly caused in the\nGanga-Brahmaputra-Meghna basin which car-\nries 60 percent of the total river flow of our coun-\ntry.\nI"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 268,
+  "fields": {
+    "message": 104,
+    "document": null,
+    "page_number": 185,
+    "snippet": "to 5000 km per day over the ocean. While mov-\ning over the ocean they pick up energy from\nthe warm water of the ocean and some of them\ngrow into a devastating intensity. On an aver-\nage about 5 to 6 t"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 269,
+  "fields": {
+    "message": 106,
+    "document": null,
+    "page_number": 4,
+    "snippet": "Classification of cyclone \n• Hurricanes – tropical cyclones in the \nAtlantic and Eastern Pacific Oceans \n• Typhoons – tropical cyclones in  waste \nPacific Ocean and north of equator \n• Cyclones – trop"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 270,
+  "fields": {
+    "message": 106,
+    "document": null,
+    "page_number": 9,
+    "snippet": "Criteria followed classify cyclones\n\n¢ As adopted by Meteorological Department of\n\nIndia. au —_\n\nType of Disturbances ‘Wind Speed in Km/h ‘Wind Speed in Knots\n\n| Low Pressure | Less than 31 | Less tha"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 271,
+  "fields": {
+    "message": 106,
+    "document": null,
+    "page_number": 10,
+    "snippet": "Cyclone MAP of India\n\nVulnerability to storm surges is not uniform along Indian\ncoasts.\n\nEast coast of India are most vulnerable to high surges\n\nCA cenS Wines SPEED A CP COMETH eI. — i) North Orissa, "
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 272,
+  "fields": {
+    "message": 106,
+    "document": null,
+    "page_number": 3,
+    "snippet": "Cyclone\n\n¢ \"Cyclone\" is an intense whirl in the\natmosphere with very strong winds circulating\naround it in anti-clockwise direction in the\nNorthern Hemisphere and in clockwise\ndirection in the Souther"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 273,
+  "fields": {
+    "message": 106,
+    "document": null,
+    "page_number": 11,
+    "snippet": "“Consequent strong winds. These, in turn, generate storm\nsurges.\n\n« Abnormal rise of sea level near the coast caused by a\nsevere tropical cyclone.\n\n« Very strong winds may damage installations, dwelli"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 274,
+  "fields": {
+    "message": 108,
+    "document": null,
+    "page_number": 4,
+    "snippet": "Classification of cyclone \n• Hurricanes – tropical cyclones in the \nAtlantic and Eastern Pacific Oceans \n• Typhoons – tropical cyclones in  waste \nPacific Ocean and north of equator \n• Cyclones – trop"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 275,
+  "fields": {
+    "message": 108,
+    "document": null,
+    "page_number": 9,
+    "snippet": "Criteria followed classify cyclones\n\n¢ As adopted by Meteorological Department of\n\nIndia. au —_\n\nType of Disturbances ‘Wind Speed in Km/h ‘Wind Speed in Knots\n\n| Low Pressure | Less than 31 | Less tha"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 276,
+  "fields": {
+    "message": 108,
+    "document": null,
+    "page_number": 10,
+    "snippet": "Cyclone MAP of India\n\nVulnerability to storm surges is not uniform along Indian\ncoasts.\n\nEast coast of India are most vulnerable to high surges\n\nCA cenS Wines SPEED A CP COMETH eI. — i) North Orissa, "
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 277,
+  "fields": {
+    "message": 108,
+    "document": null,
+    "page_number": 3,
+    "snippet": "Cyclone\n\n¢ \"Cyclone\" is an intense whirl in the\natmosphere with very strong winds circulating\naround it in anti-clockwise direction in the\nNorthern Hemisphere and in clockwise\ndirection in the Souther"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 278,
+  "fields": {
+    "message": 108,
+    "document": null,
+    "page_number": 11,
+    "snippet": "“Consequent strong winds. These, in turn, generate storm\nsurges.\n\n« Abnormal rise of sea level near the coast caused by a\nsevere tropical cyclone.\n\n« Very strong winds may damage installations, dwelli"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 279,
+  "fields": {
+    "message": 108,
+    "document": null,
+    "page_number": 185,
+    "snippet": "promising results after two seasons. The author\nhowever states that coordination between Gov-\nernment, local NGOs and local community ini-\ntiatives both for rescue as well as rehabilitation\nneeds to b"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 280,
+  "fields": {
+    "message": 108,
+    "document": null,
+    "page_number": 236,
+    "snippet": "promising results after two seasons. The author\nhowever states that coordination between Gov-\nernment, local NGOs and local community ini-\ntiatives both for rescue as well as rehabilitation\nneeds to b"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 281,
+  "fields": {
+    "message": 108,
+    "document": null,
+    "page_number": 181,
+    "snippet": "in the country has been identified as being prone\nto floods. Major floods are mainly caused in the\nGanga-Brahmaputra-Meghna basin which car-\nries 60 percent of the total river flow of our coun-\ntry.\nI"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 282,
+  "fields": {
+    "message": 110,
+    "document": null,
+    "page_number": 19,
+    "snippet": "Armed Forces\nCentral Para Military Forces\nState Police Forces and Fire Services\n\nCivil Defence and Home Guards\n\nE.g.: Non Governmental Organizations National Service Scheme (NSS)\n\nCo-Operative for ass"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 283,
+  "fields": {
+    "message": 110,
+    "document": null,
+    "page_number": 19,
+    "snippet": "E.g.: Indian Meteorological department (IMD) plays a key role in\n\nforewarning the disaster of cyclone-storms by detection tracing. It has\n5 centres in Kolkata, Bhubaneswar, Vishakhapatnam, Chennai & )"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 284,
+  "fields": {
+    "message": 110,
+    "document": null,
+    "page_number": 0,
+    "snippet": "B. Tech (Environmental Studies)\n\nCyclone\n\nUnit 5\n\nEnvironmental Pollution"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 285,
+  "fields": {
+    "message": 110,
+    "document": null,
+    "page_number": 20,
+    "snippet": "General management in India\n\n© An artificially created reservoir behind a dam across a river\n© Channelization of river.\n© Artificially raised embankments that reduce spilling\n\n© Channel and drainage i"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 286,
+  "fields": {
+    "message": 110,
+    "document": null,
+    "page_number": 18,
+    "snippet": "Cyclone Operation India\n\nCiMeteorological Department, by providing Cyclone Surveillance Radars at\n\nin the east coast and at Goa, Bombay in the west coast.\n\nOSatellite picture receiving equipments at D"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 287,
+  "fields": {
+    "message": 110,
+    "document": null,
+    "page_number": 37,
+    "snippet": "organizations include government organisations\nsuch as the BSI and ZSI, and NGOs such as BNHS,\nWWF-I, etc.\nBombay Natural History Society (BNHS),\nMumbai: the BNHS began as a small society of\nsix membe"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 288,
+  "fields": {
+    "message": 110,
+    "document": null,
+    "page_number": 37,
+    "snippet": "in public places.\n• Take part in events organised on World\nEnvironment Day, Wildlife Week, etc.\n• Visit a National Park or Sanctuary, or spend\ntime in whatever nature you have near your\nhome.\n1.2.1 In"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 289,
+  "fields": {
+    "message": 110,
+    "document": null,
+    "page_number": 39,
+    "snippet": "involved with the preparation of site-specific,\nenvironmental manuals for schoolteachers.\nKalpavriksh was responsible for developing\nIndia’s National Biodiversity Strategy and Action\nPlan in 2003.\nSal"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 290,
+  "fields": {
+    "message": 114,
+    "document": null,
+    "page_number": 19,
+    "snippet": "Armed Forces\nCentral Para Military Forces\nState Police Forces and Fire Services\n\nCivil Defence and Home Guards\n\nE.g.: Non Governmental Organizations National Service Scheme (NSS)\n\nCo-Operative for ass"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 291,
+  "fields": {
+    "message": 114,
+    "document": null,
+    "page_number": 19,
+    "snippet": "E.g.: Indian Meteorological department (IMD) plays a key role in\n\nforewarning the disaster of cyclone-storms by detection tracing. It has\n5 centres in Kolkata, Bhubaneswar, Vishakhapatnam, Chennai & )"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 292,
+  "fields": {
+    "message": 114,
+    "document": null,
+    "page_number": 0,
+    "snippet": "B. Tech (Environmental Studies)\n\nCyclone\n\nUnit 5\n\nEnvironmental Pollution"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 293,
+  "fields": {
+    "message": 114,
+    "document": null,
+    "page_number": 20,
+    "snippet": "General management in India\n\n© An artificially created reservoir behind a dam across a river\n© Channelization of river.\n© Artificially raised embankments that reduce spilling\n\n© Channel and drainage i"
+  }
+},
+{
+  "model": "rag_app.source",
+  "pk": 294,
+  "fields": {
+    "message": 114,
+    "document": null,
+    "page_number": 18,
+    "snippet": "Cyclone Operation India\n\nCiMeteorological Department, by providing Cyclone Surveillance Radars at\n\nin the east coast and at Goa, Bombay in the west coast.\n\nOSatellite picture receiving equipments at D"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-06-17T07:38:20.223Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "document"
+    ],
+    "object_id": "8",
+    "object_repr": "Disaster  Management Cyclone.pdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "77",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "69",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "68",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "67",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "66",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "65",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "64",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "63",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "62",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "61",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "60",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "57",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "56",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "53",
+    "object_repr": "what is the fullform of BNHS",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "52",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "45",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "43",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "42",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "40",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "39",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "29",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "19",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "17",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "11",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "10",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "8",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-06-21T06:10:32.620Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "chatsession"
+    ],
+    "object_id": "2",
+    "object_repr": "New Chat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-06-24T05:38:57.383Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "document"
+    ],
+    "object_id": "16",
+    "object_repr": "env-book-2018.pdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-06-24T05:46:30.265Z",
+    "user": [
+      "Bishwajeet"
+    ],
+    "content_type": [
+      "rag_app",
+      "document"
+    ],
+    "object_id": "17",
+    "object_repr": "env-book-2018.pdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+}
+]

@@ -1,0 +1,63 @@
+{% extends "rag_app/base.html" %}
+{% load static %}
+
+{% block title %}Chat{% endblock %}
+
+{% block content %}
+<div class="chat-layout">
+
+    <aside class="sidebar">
+        <button class="btn-new-chat" id="newChatBtn">+ New Chat</button>
+        <!-- Document Selector -->
+        <div class="doc-selector">
+            <div class="doc-selector-header">
+                <span>📂 Documents</span>
+                <button class="btn-select-all" id="selectAllBtn">All</button>
+            </div>
+            <div class="doc-selector-list" id="docSelectorList">
+                <p class="sidebar-empty">No documents yet.</p>
+            </div>
+        </div>
+
+        <div class="sessions-label">💬 Chats</div>
+        <div class="session-list" id="sessionList">
+            <p class="sidebar-empty">No chats yet.</p>
+        </div>
+    </aside>
+
+    <!-- Chat Window -->
+    <section class="chat-window">
+
+        <div class="chat-header" id="chatHeader" style="display:none;">
+            <span class="chat-header-title" id="chatHeaderTitle">Chat</span>
+            <button class="btn-clear-chat" id="clearChatBtn">🧹 Clear Chat</button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="welcome-msg">
+                <h2>👋 Hello!</h2>
+                <p>Upload documents first, then ask me anything about them.</p>
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator" style="display:none;">
+            <span></span><span></span><span></span>
+        </div>
+
+        <div class="chat-input-area">
+            <textarea
+                id="questionInput"
+                placeholder="Ask a question about your documents..."
+                rows="1"
+            ></textarea>
+            <button class="btn-send" id="sendBtn">Send ↑</button>
+        </div>
+
+    </section>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'rag_app/js/chat.js' %}"></script>
+{% endblock %}

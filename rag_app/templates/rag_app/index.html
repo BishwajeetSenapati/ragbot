@@ -1,0 +1,51 @@
+{% extends "rag_app/base.html" %}
+{% load static %}
+
+{% block title %}Upload Documents{% endblock %}
+
+{% block content %}
+<div class="upload-page">
+
+    <div class="hero">
+        <h1>Ask anything from <span class="accent">your documents</span></h1>
+        <p>Upload PDFs, Word docs, or text files and chat with them instantly.</p>
+    </div>
+
+    <div class="upload-box" id="uploadBox">
+        <div class="upload-icon">📂</div>
+        <p class="upload-text">Drag & drop files here</p>
+        <p class="upload-sub">or</p>
+        <label class="btn-upload" for="fileInput">Browse Files</label>
+        <input type="file" id="fileInput" multiple
+               accept=".pdf,.txt,.docx" hidden />
+        <p class="upload-hint">Supports PDF, TXT, DOCX</p>
+    </div>
+
+    <div class="file-list" id="fileList"></div>
+
+    <div class="upload-actions" id="uploadActions" style="display:none;">
+        <button class="btn-primary" id="uploadBtn">
+            Upload & Index Documents
+        </button>
+    </div>
+
+    <div class="progress-wrap" id="progressWrap" style="display:none;">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <p class="progress-text" id="progressText">Uploading...</p>
+    </div>
+
+    <div class="alert" id="alertBox" style="display:none;"></div>
+
+    <div class="goto-chat" id="gotoChat" style="display:none;">
+        <p>Documents indexed successfully!</p>
+        <a href="{% url 'chat' %}" class="btn-primary">Start Chatting →</a>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'rag_app/js/upload.js' %}"></script>
+{% endblock %}
