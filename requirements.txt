@@ -1,7 +1,7 @@
 django==5.1.0
 djangorestframework==3.15.2
 python-dotenv==1.0.1
-psycopg2-binary==2.9.9
+psycopg[binary]==3.2.3
 gunicorn==22.0.0
 whitenoise==6.7.0
 pinecone-client==3.2.2
