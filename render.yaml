@@ -3,7 +3,7 @@ services:
     name: ragbot
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn rag_project.wsgi:application --bind 0.0.0.0:$PORT"
+    startCommand: "gunicorn rag_project.wsgi:application --bind 0.0.0.0:${PORT:-8000}"
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
