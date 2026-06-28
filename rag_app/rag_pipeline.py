@@ -9,53 +9,54 @@ def load_document(file_path: str):
         TextLoader,
         Docx2txtLoader,
     )
+    import platform
+
     ext = os.path.splitext(file_path)[-1].lower()
 
     if ext == ".pdf":
+        # Always use PyPDF directly on Linux/Render (no OCR)
+        # OCR only works locally on Windows
+        loader = PyPDFLoader(file_path)
+        docs   = loader.load()
+
+        if platform.system() != "Windows":
+            print(f"Linux/Render → skipping OCR, using PyPDF only")
+            return docs
+
+        # Windows only — check if OCR needed
         from langchain_core.documents import Document
         import pytesseract
         from pdf2image import convert_from_path
 
         pytesseract.pytesseract.tesseract_cmd = settings.TESSERACT_CMD
 
-        loader = PyPDFLoader(file_path)
-        docs   = loader.load()
-
         if len(docs) > 50:
-            print(f"Large PDF ({len(docs)} pages) → skipping OCR check")
-            needs_ocr = False
-        else:
-            needs_ocr = any(
-                len(doc.page_content.strip()) < 100
-                for doc in docs
-            )
+            print(f"Large PDF → skipping OCR")
+            return docs
+
+        needs_ocr = any(
+            len(doc.page_content.strip()) < 100
+            for doc in docs
+        )
 
         if not needs_ocr:
             print(f"Normal PDF → skipping OCR")
             return docs
 
         print(f"Mixed/scanned PDF → converting pages to images")
-        import platform
-
-        convert_kwargs = {
-            "dpi": 150,
-            "thread_count": 4,
-        }
-
-        # Only use POPPLER_PATH on Windows
-        if platform.system() == "Windows" and settings.POPPLER_PATH:
-            convert_kwargs["poppler_path"] = settings.POPPLER_PATH
-
-        images = convert_from_path(file_path, **convert_kwargs)
+        images = convert_from_path(
+            file_path,
+            dpi=150,
+            thread_count=4,
+            poppler_path=settings.POPPLER_PATH,
+        )
 
         final_docs = []
         for i, doc in enumerate(docs):
             page_text = doc.page_content.strip()
             if len(page_text) >= 100:
-                print(f"Page {i+1}: text ({len(page_text)} chars)")
                 final_docs.append(doc)
             else:
-                print(f"Page {i+1}: running OCR...")
                 if i < len(images):
                     ocr_text = pytesseract.image_to_string(
                         images[i], lang='eng'
@@ -70,12 +71,8 @@ def load_document(file_path: str):
                                 "ocr":         True,
                             }
                         ))
-                        print(f"Page {i+1}: OCR → {len(ocr_text)} chars")
-                    else:
-                        print(f"Page {i+1}: blank, skipping")
 
-        print(f"Done: {len(final_docs)}/{len(docs)} pages indexed")
-        return final_docs
+        return final_docs if final_docs else docs
 
     elif ext == ".txt":
         loader = TextLoader(file_path)

@@ -35,6 +35,7 @@ def documents(request):
 @require_http_methods(["POST"])
 def upload_document(request):
     import tempfile
+    import threading
 
     files = request.FILES.getlist("documents")
     if not files:
@@ -48,14 +49,13 @@ def upload_document(request):
         if ext not in allowed:
             return JsonResponse({"error": f"Unsupported file: {f.name}"}, status=400)
 
-        # Save to temp file for processing
+        # Save to temp file
         tmp = tempfile.NamedTemporaryFile(delete=False, suffix=ext)
         for chunk in f.chunks():
             tmp.write(chunk)
         tmp.close()
         temp_path = tmp.name
 
-        # Create document record (no file saved to disk permanently)
         doc = Document.objects.create(
             user=request.user,
             name=f.name,
@@ -65,12 +65,16 @@ def upload_document(request):
         )
         saved.append((doc, temp_path))
 
-    # Index each document
-    for doc, temp_path in saved:
-        try:
-            print(f"Generating summary: {doc.name}")
+    # Index in background so request returns immediately
+    def index_in_background(doc_id, temp_path, user_id):
+        from .rag_pipeline import index_document, summarize_document
+        from .models import Document as Doc
+        import os
 
-            # Generate summary FIRST before indexing deletes temp file
+        try:
+            doc = Doc.objects.get(id=doc_id)
+
+            # Summary first
             try:
                 doc.summary = summarize_document(temp_path)
                 print(f"Summary generated ✅")
@@ -78,29 +82,45 @@ def upload_document(request):
                 print(f"SUMMARY ERROR: {e}")
                 doc.summary = ""
 
-            # Then index document
-            print(f"Indexing: {doc.name}")
-            chunk_count = index_document(temp_path, request.user.id, doc.id)
+            # Then index
+            chunk_count = index_document(temp_path, user_id, doc_id)
             doc.chunk_count = chunk_count
             doc.status = "ready"
+            print(f"Indexing complete ✅")
 
         except Exception as e:
             print(f"INDEXING ERROR: {e}")
             import traceback
             traceback.print_exc()
-            doc.status = "failed"
+            try:
+                doc = Doc.objects.get(id=doc_id)
+                doc.status = "failed"
+                doc.save()
+            except Exception:
+                pass
 
         finally:
-            # Clean up temp file after both summary and indexing are done
             if os.path.exists(temp_path):
                 os.unlink(temp_path)
                 print(f"Temp file deleted ✅")
 
-        doc.save()
+        try:
+            doc.save()
+        except Exception:
+            pass
+
+    for doc, temp_path in saved:
+        thread = threading.Thread(
+            target=index_in_background,
+            args=(doc.id, temp_path, request.user.id)
+        )
+        thread.daemon = True
+        thread.start()
+        print(f"Background indexing started: {doc.name}")
 
     return JsonResponse({
         "success": True,
-        "message": f"{len(saved)} file(s) uploaded successfully.",
+        "message": f"{len(saved)} file(s) uploaded! Indexing in background — please wait 2-3 minutes then refresh.",
         "documents": [
             {"id": d.id, "name": d.name, "status": d.status}
             for d, _ in saved
