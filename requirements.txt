@@ -4,7 +4,7 @@ python-dotenv==1.0.1
 psycopg[binary]>=3.2.10
 gunicorn==22.0.0
 whitenoise==6.7.0
-pinecone-client==3.2.2
+pinecone==5.0.0
 pypdf==4.3.1
 docx2txt==0.8
 pytesseract==0.3.13
