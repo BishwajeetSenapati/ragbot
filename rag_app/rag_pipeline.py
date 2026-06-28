@@ -294,10 +294,8 @@ def summarize_document(file_path: str) -> str:
 
     prompt = f"""You are a document summarizer.
 Read the following text and write a clear, concise summary in 3-4 sentences.
-The summary should tell the reader:
-- What this document is about
-- What main topics it covers
-- Who would find it useful
+The summary should tell the reader what this document is about,
+what main topics it covers, and who would find it useful.
 
 Text:
 {context}

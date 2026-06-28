@@ -3,8 +3,7 @@ cat > build.sh << 'EOF'
 set -o errexit
 
 pip install --upgrade pip
-pip install gunicorn==21.2.0
-pip install -r requirements.txt
+pip install --no-cache-dir -r requirements.txt
 python manage.py collectstatic --noinput
 python manage.py migrate
 EOF

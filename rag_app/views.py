@@ -68,15 +68,20 @@ def upload_document(request):
     # Index each document
     for doc, temp_path in saved:
         try:
+            print(f"Generating summary: {doc.name}")
+
+            # Generate summary FIRST before indexing deletes temp file
+            try:
+                doc.summary = summarize_document(temp_path)
+                print(f"Summary generated ✅")
+            except Exception as e:
+                print(f"SUMMARY ERROR: {e}")
+                doc.summary = ""
+
+            # Then index document
             print(f"Indexing: {doc.name}")
             chunk_count = index_document(temp_path, request.user.id, doc.id)
             doc.chunk_count = chunk_count
-
-            try:
-                doc.summary = summarize_document(temp_path)
-            except Exception:
-                doc.summary = ""
-
             doc.status = "ready"
 
         except Exception as e:
@@ -86,7 +91,7 @@ def upload_document(request):
             doc.status = "failed"
 
         finally:
-            # Always delete temp file
+            # Clean up temp file after both summary and indexing are done
             if os.path.exists(temp_path):
                 os.unlink(temp_path)
                 print(f"Temp file deleted ✅")
