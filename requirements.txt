@@ -11,6 +11,6 @@ pytesseract==0.3.13
 pdf2image==1.17.0
 pillow==11.0.0
 requests==2.32.3
-groq==0.9.0
+groq==0.13.0
 dj-database-url==2.2.0
 langchain-text-splitters==0.2.2
