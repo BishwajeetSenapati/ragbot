@@ -86,14 +86,21 @@ PINECONE_INDEX   = os.getenv('PINECONE_INDEX', 'ragbot')
 VECTORSTORE_DIR  = BASE_DIR / 'vectorstore'
 
 # OCR Settings (local development only)
-TESSERACT_CMD = os.getenv(
-    'TESSERACT_CMD',
-    r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-)
-POPPLER_PATH = os.getenv(
-    'POPPLER_PATH',
-    r'C:\poppler-26.02.0\Library\bin'
-)
+import platform
+
+if platform.system() == "Windows":
+    TESSERACT_CMD = os.getenv(
+        'TESSERACT_CMD',
+        r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+    )
+    POPPLER_PATH = os.getenv(
+        'POPPLER_PATH',
+        r'C:\poppler-26.02.0\Library\bin'
+    )
+else:
+    # Linux (Render)
+    TESSERACT_CMD = os.getenv('TESSERACT_CMD', '/usr/bin/tesseract')
+    POPPLER_PATH  = os.getenv('POPPLER_PATH', None)
 
 # ── Security (production) ─────────────────────────────────────────────────────
 if not DEBUG:

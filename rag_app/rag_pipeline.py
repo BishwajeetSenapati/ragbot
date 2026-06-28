@@ -35,12 +35,18 @@ def load_document(file_path: str):
             return docs
 
         print(f"Mixed/scanned PDF → converting pages to images")
-        images = convert_from_path(
-            file_path,
-            poppler_path=settings.POPPLER_PATH,
-            dpi=150,
-            thread_count=4,
-        )
+        import platform
+
+        convert_kwargs = {
+            "dpi": 150,
+            "thread_count": 4,
+        }
+
+        # Only use POPPLER_PATH on Windows
+        if platform.system() == "Windows" and settings.POPPLER_PATH:
+            convert_kwargs["poppler_path"] = settings.POPPLER_PATH
+
+        images = convert_from_path(file_path, **convert_kwargs)
 
         final_docs = []
         for i, doc in enumerate(docs):
