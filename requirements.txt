@@ -14,3 +14,5 @@ requests==2.32.3
 groq==0.13.0
 dj-database-url==2.2.0
 langchain-text-splitters==0.2.2
+langchain-community==0.2.6
+langchain-core==0.2.10
