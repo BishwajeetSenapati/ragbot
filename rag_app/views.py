@@ -320,6 +320,9 @@ def signup_user(request):
     if not username or not password:
         return JsonResponse({"error": "Username and password are required."}, status=400)
 
+    if User.objects.filter(username=username).exists():
+        return JsonResponse({"error": "Username already taken."}, status=400)
+
     if User.objects.filter(email=email).exists():
         return JsonResponse({"error": "Email already taken."}, status=400)
 
